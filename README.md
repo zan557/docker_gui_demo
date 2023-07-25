@@ -43,6 +43,11 @@ In the Dockerfile, specify the XAUTHORITY environment variable to use the path t
 ### Where to display
 X11 needs to know which display to draw the window in. Run ```echo $DISPLAY``` and copy that value to the Dockerfile. Here it is ```ENV DISPLAY :1```
 
+### Next steps
+1. Figure out USB passthrough
+2. Test real time functionality of orbslam3
+3. Configure container to talk to remote ROS master 
+
 ## Resources
 https://janert.me/blog/2022/running-a-gui-application-in-a-docker-container1/
 
