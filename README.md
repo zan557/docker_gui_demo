@@ -23,11 +23,11 @@ An app needs to know 3 things to open a window
 3. Where to display the window
 
 ### Communicating with X11
-X11 communicates using unix sockets, and runs a server on the host. Since a container runs in isolation, specify
+X11 communicates using unix sockets, and exists as a server on the host. Since a container runs in isolation, specify
 ```
 --net host
 ``` 
-to allow the container to use the host's network.
+~~to allow the container to use the host's network.~~ Not quite sure if this is approriate, as Unix sockets are not part of the network stack and is not the same as TCP sockets(loopback localhost connection). Unix sockets are more in the vein of local IPC. In any case the requirement to be on the same network as the host is still required.
 
 The unix socket exists as a file on the host, so we bind mount the socket to the container using 
 ```
