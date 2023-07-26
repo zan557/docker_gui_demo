@@ -27,7 +27,8 @@ X11 communicates using unix sockets, and exists as a server on the host. Since a
 ```
 --net host
 ``` 
-~~to allow the container to use the host's network.~~ Not quite sure if this is approriate, as Unix sockets are not part of the network stack and is not the same as TCP sockets(loopback localhost connection). Unix sockets are more in the vein of local IPC. In any case the requirement to be on the same network as the host is still required.
+~~to allow the container to use the host's network.~~ 
+Not quite sure if this is appropriate, as Unix sockets are not part of the network stack and is not the same as TCP sockets(loopback localhost connection). Unix sockets are more in the vein of local IPC. In any case the requirement to be on the same network as the host is still required.
 
 The unix socket exists as a file on the host, so we bind mount the socket to the container using 
 ```
