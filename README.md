@@ -2,6 +2,10 @@
 Configuring a container to connect to its host's X11 display server.
 A container is typically used to run background/cli apps, but there are cases for running containerized GUI apps such as for machine vision.
 
+## x11docker
+A premade solution exists
+https://github.com/mviereck/x11docker
+
 ## Build and run
 clone, cd then call docker build
 ```
